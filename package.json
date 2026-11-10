@@ -1,0 +1,58 @@
+{
+  "name": "fetch-retry-after",
+  "version": "1.0.0",
+  "description": "A tiny, dependency-free Fetch wrapper with safe retries, jitter, Retry-After support, and cancellation.",
+  "author": "Shantosh Seelam",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-shantosh/fetch-retry-after.git"
+  },
+  "homepage": "https://github.com/s-shantosh/fetch-retry-after#readme",
+  "bugs": {
+    "url": "https://github.com/s-shantosh/fetch-retry-after/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check index.cjs",
+    "test": "node --test",
+    "prepublishOnly": "npm run check && npm test"
+  },
+  "sideEffects": false,
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "fetch",
+    "http",
+    "retry",
+    "retry-after",
+    "exponential-backoff",
+    "jitter",
+    "network",
+    "browser",
+    "node"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
