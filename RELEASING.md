@@ -19,11 +19,11 @@
 
 ## Later releases with GitHub Actions
 
-After the first release, configure npm trusted publishing for this public GitHub repository. In the package's npm settings, add a GitHub Actions trusted publisher for owner `s-shantosh`, repository `fetch-retry-after`, and workflow `.github/workflows/publish.yml`. Allow direct `npm publish` for that publisher. This workflow uses OIDC rather than a long-lived npm token.
+After the first release, configure npm trusted publishing for this public GitHub repository. In the package's npm settings, add a GitHub Actions trusted publisher for owner `s-shantosh`, repository `fetch-retry-after`, and workflow filename `publish.yml`. Allow direct `npm publish` for that publisher. This workflow uses OIDC rather than a long-lived npm token.
 
 For each release:
 
 1. Update `CHANGELOG.md` and increment the version with `npm version patch`, `npm version minor`, or `npm version major`.
 2. Push the commit and tag: `git push origin main --follow-tags`.
-3. In GitHub, open **Actions → Publish to npm → Run workflow** and run it from `main`.
+3. In GitHub, open **Actions > Publish to npm > Run workflow** and run it from `main`.
 4. Confirm the new version with `npm view fetch-retry-after version`.
